@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Muro
+comment0.text=\r\n\ Esta\ clase\ simula\ un\ muro\ de\ publicaciones\ de\ texto\ y\ fotos\r\n\ \r\n\ @FranAlvarez\ \r\n\ @Version\ 1.0\r\n
+comment1.params=
+comment1.target=Muro()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Muro\r\n
+comment2.params=entradaTexto
+comment2.target=void\ addEntradaTexto(EntradaTexto)
+comment2.text=\r\n\ Este\ metodo\ anade\ una\ entrada\ de\ texto\ al\ muro\r\n\ @param\ la\ entrada\ de\ texto\ que\ vas\ a\ anadir\r\n
+comment3.params=entradaFoto
+comment3.target=void\ addEntradaFoto(EntradaFoto)
+comment3.text=\r\n\ Este\ metodo\ anade\ una\ entrade\ de\ foto/imagen\ al\ muro\r\n\ @param\ la\ entrada\ de\ imagen\ que\ vas\ a\ anadir\r\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\r\n\ @return\ la\ informacion\ completa\ de\ la\ entrada\r\n
+numComments=5
