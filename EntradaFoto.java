@@ -1,5 +1,6 @@
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.time.temporal.ChronoUnit;
 /**
  * Esta clase simula una entrada a un muro de una red social tipo facebook de imagenes.
  * 
@@ -74,16 +75,32 @@ public class EntradaFoto
      */
     public String toString()
     {
-        String textoADevolver ="";
-        LocalDateTime ahora = momentoPublicacion.now();
-        textoADevolver = "Imagen de " + usuario + ": " + titulo + " url de la imagen: " + urlImagen + " , publicad hace " + ((ahora.getMinute()) - (momentoPublicacion.getMinute()))  + " minutos," 
-        + "tiene " + cantidadMeGusta + " MeGusta(s)";
-        if (comentarios.size()>0){
-            textoADevolver += " y " + comentarios.size() + " comentarios.";
+        String aDevolver = "";
+        aDevolver += "Usuario: " + usuario + "\n";
+        aDevolver += "Likes: " + cantidadMeGusta + "\n";        
+        aDevolver += "Url: " + urlImagen + "\n";
+        aDevolver += "Titulo: " + titulo + "\n";
+        // Calculamos el numero de segundos que han pasado desde la fecha de publicacion.
+        long numeroSegundos = momentoPublicacion.until(LocalDateTime.now(), ChronoUnit.SECONDS);
+        aDevolver += "Escrito hace ";
+        // Comprobamos si debemos expresar el tiempo en segundos o minutos.
+        if(numeroSegundos > 59){
+            aDevolver += numeroSegundos / 60 + " minutos";
         }
         else {
-            textoADevolver += " y no tiene ningun comentario.";
+            aDevolver += numeroSegundos + " segundos";
         }
-        return textoADevolver;
+        aDevolver += "\n";
+        // Comprobamos si hay comentarios. Si hay los mostramos, si no, mostramos un mensaje indicandolo.
+        if (comentarios.size() == 0)         {
+            aDevolver += "No hay comentarios\n";
+        }
+        else {
+            aDevolver += "Comentarios: \n";
+            for(String comentarioActual : comentarios){
+                aDevolver += comentarioActual + "\n";
+            }
+        } 
+        return aDevolver;
     }
 }

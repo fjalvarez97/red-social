@@ -53,10 +53,11 @@ public class Muro
         }
         else{
             System.out.println("No hay ninguna entrada de texto\n");
+            textoADevolver += "No hay ninguna entrada de texto";
         }
         System.out.println("\n-------------------------------------\n");
         if (fotos.size()>0){
-            System.out.println("\nEntradas de imagen:");
+            System.out.println("Entradas de imagen:");
             for (EntradaFoto entradaFoto : fotos)
             {
                 textoADevolver += entradaFoto;
@@ -65,6 +66,7 @@ public class Muro
         }
         else{
             System.out.println("No hay ninguna entrada de imagen");
+            textoADevolver += "No hay ninguna entrada de imagen";
         }
         return textoADevolver;
     }
