@@ -6,7 +6,7 @@ import java.time.temporal.ChronoUnit;
  * @FranAlvarez
  * @Version 1.0
  */
-public class EntradaTexto extends Entrada
+public class EntradaTexto extends EntradaConComentarios
 {
     private String mensaje;
     /**

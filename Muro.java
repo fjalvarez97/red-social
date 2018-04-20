@@ -8,65 +8,47 @@ import java.util.ArrayList;
  */
 public class Muro
 {
-    private ArrayList<EntradaTexto> mensajes;
-    private ArrayList<EntradaFoto> fotos;
+    private ArrayList<Entrada> entradas;
     /**
      * Constructor for objects of class Muro
      */
     public Muro()
     {
-        mensajes = new ArrayList<>();
-        fotos = new ArrayList<>();
+        entradas = new ArrayList<>();
     }
 
     /**
-     * Este metodo anade una entrada de texto al muro
-     * @param la entrada de texto que vas a anadir
+     * Este metodo anade una entrada al muro
+     * @param la entrada que vas a anadir
      */
-    public void addEntradaTexto(EntradaTexto entradaTexto)
+    public void addEntrada(Entrada entrada)
     {
-        mensajes.add(entradaTexto);
+        entradas.add(entrada);
     }
-
+    
     /**
-     * Este metodo anade una entrade de foto/imagen al muro
-     * @param la entrada de imagen que vas a anadir
+     * Imprime por pantalla las entradas
      */
-    public void addEntradaFoto(EntradaFoto entradaFoto)
+    public void print()
     {
-        fotos.add(entradaFoto);
+        System.out.println(this);
     }
-
+    
     /**
-     * @return la informacion completa de la entrada
+     * @return la informacion completa de las entradas
      */
     public String toString()
     {
         String textoADevolver = "";
-        if (mensajes.size()>0){
-            System.out.println("Entradas de texto:");
-            for (EntradaTexto entradaTexto : mensajes)
+        textoADevolver += "Entradas:\n";
+        if (entradas.size()>0){
+            for (Entrada entrada : entradas)
             {
-                textoADevolver += entradaTexto;
-                System.out.println(entradaTexto);
+                textoADevolver += entrada;
             }
         }
         else{
-            System.out.println("No hay ninguna entrada de texto\n");
-            textoADevolver += "No hay ninguna entrada de texto";
-        }
-        System.out.println("-------------------------------------\n");
-        if (fotos.size()>0){
-            System.out.println("Entradas de imagen:");
-            for (EntradaFoto entradaFoto : fotos)
-            {
-                textoADevolver += entradaFoto;
-                System.out.println(entradaFoto);
-            }
-        }
-        else{
-            System.out.println("No hay ninguna entrada de imagen");
-            textoADevolver += "No hay ninguna entrada de imagen";
+            textoADevolver += "No hay ninguna entrada";
         }
         return textoADevolver;
     }
