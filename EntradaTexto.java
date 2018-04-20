@@ -40,4 +40,13 @@ public class EntradaTexto extends Entrada
         aDevolver += getInfo();
         return aDevolver;
     }
+    
+    /**
+     * Muestra por pantalla el usuario junto al mensaje que ha publicado
+     */
+    public void mostrarAutorYMensaje()
+    {
+        System.out.println("Autor: " + getUsuario() + "\n");
+        System.out.println("Mensaje: " + mensaje);
+    }
 }
