@@ -40,20 +40,17 @@ public class EntradaFoto extends EntradaConComentarios
     /**
      * @return la informacion completa de la entrada
      */
+    @Override
     public String toString()
     {
-        String aDevolver = "";
-        aDevolver += "Usuario: " + getUsuario() + "\n";
-        aDevolver += "Likes: " + getCantidadMeGusta() + "\n";        
-        aDevolver += "Url: " + urlImagen + "\n";
-        aDevolver += "Titulo: " + titulo + "\n";
-        aDevolver += getInfo();
-        return aDevolver;
+        return super.toString() + "Url: " + urlImagen + "\n"
+                + "Titulo: " + titulo + "\n";
     }
 
     /**
      * Imprime por pantalla la entrada con sus detalles
      */
+    @Override
     public void mostrar()
     {
         System.out.println(this);

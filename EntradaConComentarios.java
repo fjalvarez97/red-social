@@ -58,16 +58,10 @@ public class EntradaConComentarios extends Entrada
     }
 
     /**
-     * Obtiene la informacion de la entrada
-     * @return los comentarios y el tiempo que ha pasado desde que se publico
-     * la entrada
+     * @return la informacion completa de la entrada
      */
-    public String getInfo()
+    public String toString()
     {
-        String aDevolver ="";
-        aDevolver += tiempoEntrada();
-        aDevolver += "\n";
-        aDevolver += comentarios();
-        return aDevolver;
+        return super.toString() + comentarios();
     }
 }

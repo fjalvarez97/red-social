@@ -25,15 +25,17 @@ public class Muro
     {
         entradas.add(entrada);
     }
-    
+
     /**
      * Imprime por pantalla las entradas
      */
     public void print()
     {
-        System.out.println(this);
+        for (Entrada entrada : entradas){
+            entrada.mostrar();
+        }
     }
-    
+
     /**
      * @return la informacion completa de las entradas
      */

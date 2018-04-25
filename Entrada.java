@@ -55,7 +55,7 @@ public class Entrada
     {
         return momentoPublicacion;
     }
-    
+
     /**
      * @return devuelve el tiempo que ha pasado desde que se ha realizado la entrada
      */
@@ -67,19 +67,44 @@ public class Entrada
         aDevolver += "Escrito hace "  ;      
         // Comprobamos si debemos expresar el tiempo en segundos o minutos.
         if(numeroSegundos > 59){
-           aDevolver += numeroSegundos / 60 + " minutos";
+            aDevolver += numeroSegundos / 60 + " minutos";
         }
         else {
             aDevolver += numeroSegundos + " segundos";
         }
         return aDevolver;
     }
-    
+
+    /**
+     * Obtiene la informacion de la entrada
+     * @return los comentarios y el tiempo que ha pasado desde que se publico
+     * la entrada
+     */
+    public String getInfo()
+    {
+        String aDevolver ="";
+        aDevolver += tiempoEntrada();
+        aDevolver += "\n";
+        return aDevolver;
+    }
+
+    /**
+     * @return la informacion completa de la entrada
+     */
+    public String toString()
+    {
+        String aDevolver = "";
+        aDevolver += "Usuario: " + getUsuario() + "\n";
+        aDevolver += "Likes: " + getCantidadMeGusta() + "\n";               
+        aDevolver += getInfo();
+        return aDevolver;
+    }
+
     /**
      * 
      */
     public void mostrar()
     {
-    
+
     }
 }

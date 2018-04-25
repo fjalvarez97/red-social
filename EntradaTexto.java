@@ -29,19 +29,6 @@ public class EntradaTexto extends EntradaConComentarios
     }
 
     /**
-     * @return la informacion completa de la entrada
-     */
-    public String toString()
-    {
-        String aDevolver = "";
-        aDevolver += "Usuario: " + getUsuario() + "\n";
-        aDevolver += "Likes: " + getCantidadMeGusta() + "\n";        
-        aDevolver += mensaje + "\n";        
-        aDevolver += getInfo();
-        return aDevolver;
-    }
-    
-    /**
      * Muestra por pantalla el usuario junto al mensaje que ha publicado
      */
     public void mostrarAutorYMensaje()
@@ -49,12 +36,22 @@ public class EntradaTexto extends EntradaConComentarios
         System.out.println("Autor: " + getUsuario() + "\n");
         System.out.println("Mensaje: " + mensaje);
     }
-    
+
     /**
      * Imprime por pantalla la entrada con sus detalles
      */
+    @Override
     public void mostrar()
     {
         System.out.println(this);
+    }
+
+    /**
+     * @return la informacion completa de la entrada
+     */
+    @Override
+    public String toString()
+    {
+        return  super.toString() + "Texto del mensaje: " + mensaje + "\n" ;
     }
 }
