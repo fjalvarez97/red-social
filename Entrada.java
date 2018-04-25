@@ -75,4 +75,11 @@ public class Entrada
         return aDevolver;
     }
     
+    /**
+     * 
+     */
+    public void mostrar()
+    {
+    
+    }
 }

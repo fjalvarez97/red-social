@@ -49,4 +49,12 @@ public class EntradaTexto extends EntradaConComentarios
         System.out.println("Autor: " + getUsuario() + "\n");
         System.out.println("Mensaje: " + mensaje);
     }
+    
+    /**
+     * Imprime por pantalla la entrada con sus detalles
+     */
+    public void mostrar()
+    {
+        System.out.println(this);
+    }
 }

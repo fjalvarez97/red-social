@@ -50,4 +50,12 @@ public class EntradaFoto extends EntradaConComentarios
         aDevolver += getInfo();
         return aDevolver;
     }
+
+    /**
+     * Imprime por pantalla la entrada con sus detalles
+     */
+    public void mostrar()
+    {
+        System.out.println(this);
+    }
 }

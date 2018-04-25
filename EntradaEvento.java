@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class EntradaEvento here.
  *
@@ -23,5 +22,25 @@ public class EntradaEvento extends Entrada
     public String getTitulo()
     {
         return titulo;
+    }
+
+    /**
+     * @return la informacion completa de la entrada
+     */
+    public String toString()
+    {
+        String aDevolver = "";
+        aDevolver += "Usuario: " + getUsuario() + "\n";
+        aDevolver += "Likes: " + getCantidadMeGusta() + "\n";        
+        aDevolver += "Titulo: " + titulo + "\n";
+        return aDevolver;
+    }
+
+    /**
+     * Imprime por pantalla la entrada con sus detalles
+     */
+    public void mostrar()
+    {
+        System.out.println(this);
     }
 }

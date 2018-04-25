@@ -70,5 +70,4 @@ public class EntradaConComentarios extends Entrada
         aDevolver += comentarios();
         return aDevolver;
     }
-
 }
