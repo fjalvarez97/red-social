@@ -5,7 +5,7 @@ import java.util.ArrayList;
  * @Fran Alvarez
  * @Version 1.0
  */
-public class EntradaConComentarios extends Entrada
+public abstract class EntradaConComentarios extends Entrada
 {
     private ArrayList<String> comentarios;
     /**
@@ -63,5 +63,19 @@ public class EntradaConComentarios extends Entrada
     public String toString()
     {
         return super.toString() + comentarios();
+    }
+    
+    @Override
+    public String toHtml()
+    {
+        String aDevolver = super.toHtml();
+        if (!tieneComentarios()){
+            for (String comentario : comentarios)
+                aDevolver += "<p>" + comentario + "</p>";
+        }
+        else {
+            aDevolver += "<p>No hay comentarios</p>";
+        }
+        return aDevolver;
     }
 }

@@ -16,4 +16,6 @@ comment4.text=\r\n\ Devuelve\ los\ comentarios\ de\ la\ entrada\ (1\ por\ linea)
 comment5.params=
 comment5.target=java.lang.String\ toString()
 comment5.text=\r\n\ @return\ la\ informacion\ completa\ de\ la\ entrada\r\n
-numComments=6
+comment6.params=
+comment6.target=java.lang.String\ toHtml()
+numComments=7

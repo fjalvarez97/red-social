@@ -54,4 +54,16 @@ public class EntradaTexto extends EntradaConComentarios
     {
         return  super.toString() + "Texto del mensaje: " + mensaje + "\n" ;
     }
+
+    @Override
+    public void mostrarDatosExclusivos()
+    {                
+        System.out.println(mensaje + "\n");
+    }
+    
+    @Override
+    public String toHtml()
+    {
+        return  super.toHtml() + "<p>Mensaje: " + mensaje + "</p>" ;
+    }
 }

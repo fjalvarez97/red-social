@@ -41,4 +41,18 @@ public class EntradaEvento extends Entrada
     {
         System.out.println(this);
     }
+
+    /**
+     * Devuelve los datos particulares de este tipo de entrada
+     */
+    public void mostrarDatosExclusivos()
+    {
+        System.out.println("Nombre del evento: " + titulo);
+    }
+
+    @Override
+    public String toHtml()
+    {
+        return super.toHtml() + "<p>" + titulo + "</p>" + "\n";
+    }
 }

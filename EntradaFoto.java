@@ -44,7 +44,7 @@ public class EntradaFoto extends EntradaConComentarios
     public String toString()
     {
         return super.toString() + "Url: " + urlImagen + "\n"
-                + "Titulo: " + titulo + "\n";
+        + "Titulo: " + titulo + "\n";
     }
 
     /**
@@ -54,5 +54,21 @@ public class EntradaFoto extends EntradaConComentarios
     public void mostrar()
     {
         System.out.println(this);
+    }
+
+    /**
+     * Devuelve los datos particulares de este tipo de entrada
+     */
+    public void mostrarDatosExclusivos()
+    {
+        System.out.println("Url: " + urlImagen + "\n"
+            + "Titulo: " + titulo + "\n");
+    }
+
+    @Override
+    public String toHtml()
+    {
+        return super.toHtml() + "<p><img src=\""+ urlImagen + "\"></p>"
+                + "<p>" + titulo + "</p>";
     }
 }

@@ -7,13 +7,13 @@ import java.time.temporal.ChronoUnit;
  * @Fran Alvarez
  * @version 1.0
  */
-public class Entrada
+public  abstract class Entrada
 {
     private String usuario;
     private LocalDateTime momentoPublicacion;
     private int cantidadMeGusta;
     /**
-     * Constructor for objects of class Entrad
+     * Constructor for objects of class Entrada
      */
     public Entrada(String usuario)
     {
@@ -106,5 +106,24 @@ public class Entrada
     public void mostrar()
     {
 
+    }
+
+    /**
+     * Muestra por pantalla los datos exclusivos de la clase.
+     */
+    public void mostrarDatosExclusivos()
+    { 
+        
+    }   
+    
+    /**
+     * Devuelve los datos de la entradas como filas de una tabla html
+     * @return los detalles de la entrada
+     */
+    public  String toHtml()
+    {
+        return "<p>Publicado por: " + usuario + "</p>"
+             + "<p>Fecha publicacion: " + tiempoEntrada() + "</p>"
+             + "<p> MeGusta: " + cantidadMeGusta + "</p>";            
     }
 }
